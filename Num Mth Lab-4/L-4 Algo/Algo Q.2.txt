@@ -1,0 +1,27 @@
+Step 1: Start.
+
+Step 2: Input the number of equations nn and the augmented matrix a[n][n+1]a[n][n+1] — the coefficients of the variables and the constant terms.
+
+Step 3: For each row ii from 0 to n−1n−1:
+a) Check if the pivot element a[i][i]==0; if it is, stop and display an error message ("Singular matrix detected").
+b) Normalize the pivot row by dividing every element of row ii by the pivot element a[i][i] so the pivot becomes 1:
+a[i][j] = a[i][j] / a[i][i]for each j from 0 to n
+
+
+Step 4: For every other row kk (where k≠i):
+a) Calculate the factor to make the a[k][i] element zero:
+factor = a[k][i]
+
+
+b) Subtract the appropriate multiple of the pivot row from row kk:
+a[k][j]=a[k][j] − factor × a[i][j]for each j from 0 to n
+
+
+Step 5: Repeat steps 3 and 4 until the matrix becomes the reduced row-echelon form (identity matrix on the left side).
+
+Step 6: The rightmost column of the augmented matrix now contains the solution:
+x[i]=a[i][n]for each i from 0 to n−1
+
+Step 7: Display the solution x[1],x[2],…,x[n]x[1],x[2],…,x[n].
+
+Step 8: End.

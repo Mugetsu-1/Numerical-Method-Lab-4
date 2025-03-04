@@ -1,0 +1,27 @@
+Step 1: Start.
+
+Step 2: Input the number of equations nn, the matrix of coefficients a[n][n], and the constants array b[n].
+
+Step 3: Initialize the solution array x[n] with an initial guess (like all zeros).
+
+Step 4: Set the convergence tolerance ϵϵ (like 0.0010.001) and maximum number of iterations to prevent infinite loops.
+
+Step 5: Repeat the following steps until the solution converges:
+
+a) For each equation ii from 00 to n−1:
+- Store the old value of x[i]:
+   old_x[i]=x[i]
+
+b) Calculate the error as the maximum absolute difference between the old and new values of x[i]:
+
+error = max ∣ xi​−old_x[i] ∣
+
+Step 6: Check the stopping condition:
+
+a) If the error becomes smaller than the tolerance ϵϵ, stop the iteration — the solution has converged.
+
+b) If the number of iterations exceeds the limit, stop and display an error message ("Solution did not converge").
+
+Step 7: Once converged, display the solution array x[1],x[2],…,x[n].
+
+Step 8: End.

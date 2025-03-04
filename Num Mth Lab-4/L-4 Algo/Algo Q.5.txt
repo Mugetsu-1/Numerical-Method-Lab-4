@@ -1,0 +1,24 @@
+Step 1: Start
+
+Step 2: Define the matrix A (e.g., 3x3 matrix) whose eigenvalue we want to calculate.
+
+Step 3: Define an initial guess for the eigenvector v. This is usually a random vector or a vector of ones.
+
+Step 4: Set the number of maximum iterations maxIterations and the convergence tolerance tolerance.
+
+Step 5: For each iteration (up to maxIterations):
+
+    Step 5.1: Multiply the matrix A with the current eigenvector v to obtain a new vector Av.
+    Step 5.2: Compute the norm (magnitude) of the new vector Av. This norm will serve as an                     approximation of the eigenvalue.
+    Step 5.3: Normalize the vector Av by dividing each element by the computed norm to update the eigenvector v.
+
+Step 6: Estimate the eigenvalue as the norm of the new vector Av.
+
+Step 7: Check if the difference between the estimated eigenvalue from the current iteration and the previous one is smaller than the tolerance.
+
+    If the difference is smaller than the tolerance, stop the iterations and return the estimated eigenvalue.
+    Otherwise, continue to the next iteration.
+
+Step 8: If the algorithm reaches maxIterations without satisfying the convergence criterion, stop and return the current estimated eigenvalue.
+
+Step 9: End

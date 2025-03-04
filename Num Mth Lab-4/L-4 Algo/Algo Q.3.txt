@@ -1,0 +1,24 @@
+Step 1: Start.
+
+Step 2: Input the number of equations n, the matrix of coefficients a[n][n], and the constants array b[n].
+
+Step 3: Initialize the solution array x[n] with an initial guess — usually all zeros or any initial approximation.
+
+Step 4: Set the convergence tolerance ϵϵ (like 0.0010.001) and the maximum number of iterations to prevent infinite loops.
+
+Step 5: Repeat the following steps until the solution converges:
+a) For each equation ii, compute the new value of x[i]:
+    xi(k+1) = bi−∑j≠iaijxj(k) / aii
+
+
+b) Calculate the error as the maximum absolute difference between the old and new values:
+error = max⁡∣xi(k+1)−xi(k)∣
+
+
+Step 6: Check the stopping condition:
+a) If the error becomes smaller than the tolerance ϵϵ, stop the iteration — the solution has converged.
+b) If the number of iterations exceeds the maximum limit, stop and display an error message ("Solution did not converge").
+
+Step 7: Once converged, display the solution array x[1],x[2],…,x[n].
+
+Step 8: End.
